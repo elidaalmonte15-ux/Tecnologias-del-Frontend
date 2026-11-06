@@ -35,10 +35,17 @@ a:active {
 /*
 los pSeudo Elementos:
 */
-#p3::first-line, #p4::first-line, #p5::first-line {
+.info::first-line {
     color: red;
     font-variant: small-caps;
     font-size: 19px;
+}
+/* Como ejercicio: Seleccionar la primera letra de los parrafos
+de la clase info y aumentarle el tamaño de la letra al 200% */
+.info::first-letter {
+    color: blue;
+    font-variant: small-caps;
+    font-size: 200%;
 }
    </style>
 </head>
@@ -60,9 +67,10 @@ como es el caso de las pseudo clases -->
 
 <!-- A modo de ejemplo: Vamos a aplicar un estilo CSS a las primeras lineas de los parrafos que se muestran a continuacion -->
 
-<p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magnam labore, nihil eius sapiente voluptatum adipisci maiores deserunt facilis, ducimus dolore ullam nemo explicabo debitis omnis architecto delectus! Deleniti, beatae?</p>
-<p id="p4">Cum iure nemo officia, recusandae architecto eveniet sed, sunt, incidunt distinctio aperiam quia voluptas eius. Eum saepe ratione velit maxime fugit hic dolorem! Distinctio odio sed assumenda voluptatem, architecto ut.</p>
-<p id="p5">Sint voluptatibus asperiores eos aliquam non. Alias repellat, aliquid ipsam provident mollitia et aliquam quia blanditiis veritatis ex, magnam voluptatem perferendis quod nisi natus! Neque non accusantium odio libero tempora!</p>
+
+<p id="p3" class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magnam labore, nihil eius sapiente voluptatum adipisci maiores deserunt facilis, ducimus dolore ullam nemo explicabo debitis omnis architecto delectus! Deleniti, beatae?</p>
+<p id="p4" class="info">Cum iure nemo officia, recusandae architecto eveniet sed, sunt, incidunt distinctio aperiam quia voluptas eius. Eum saepe ratione velit maxime fugit hic dolorem! Distinctio odio sed assumenda voluptatem, architecto ut.</p>
+<p id="p5" class="info">Sint voluptatibus asperiores eos aliquam non. Alias repellat, aliquid ipsam provident mollitia et aliquam quia blanditiis veritatis ex, magnam voluptatem perferendis quod nisi natus! Neque non accusantium odio libero tempora!</p>
 
 </body> 
 </html>  
