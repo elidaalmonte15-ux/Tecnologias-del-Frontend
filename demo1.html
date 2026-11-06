@@ -2,47 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--La etiqueta meta, a continuación es lo minimo para garantizar que 
-la pagina web se muestre correctamente en diferentes dispositivos, es decir,
-para que sea responsive design, que responsive no quiere decir responsable, sino
-que se adapta a diferentes tamaños de pantalla -->  
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introal html</title>
-    <style>
-        /* 
-        selectores basicos de css
-        */
-        /*
-        por el nombre del elemento
-        */
-        p {
-            color:yellow;
-        }
-        /*
-      seleccionar  el mismo parrafo pero por el id
-        */
-        #parrafo1{
-            background-color: blue;
-        }
+   <style>
+    /*
+    cuando el link no a sido visitado tadavia
+    */
+    a:link {
+        color: red;
+       
         
-        /* Selector por la clase del elemento, es decir, seleccionar 
-los elementos que tienen el mismo atributo class */
-      .info {
-        border: 3px dashed black;
-        background-color: brown;
-      }  
-    </style>
-    <link rel="stylesheet" href="css/estilos.css">
+    } 
+    /*
+        cuando el enlace a sido visitado
+        */
+        
+    a:visited {
+        color: green;
+    }
+/*
+cuando el raton esta encima del enlase sin hacer click en el mismo
+*/
+a:hover {
+    color: hotpink;
+}
+/* Cuando el link ha sido seleccionado, cuando esta activo, es decir
+cuando hacemos click y mantenemos el click presionado sobre el link */
+a:active {
+    color: blue;
+}
+/*
+los pSeudo Elementos:
+*/
+#p3::first-line, #p4::first-line, #p5::first-line {
+    color: red;
+    font-variant: small-caps;
+    font-size: 19px;
+}
+   </style>
 </head>
 <body>
-   
-<!-- Introduccion al CSS. Primero enteder de donde sale el termino cascada -->
+ <!-- Las PSeudoclases: Son selectores que se aplican en dependencia del 
+estado del elemento -->
+<h1>Aplicar estilo a un enlace en dependencia del estado del mismo</h1>
 
- <p id="parrafo1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi eius eaque, earum non itaque culpa distinctio minus quam rem aperiam adipisci mollitia quae, a quisquam quidem obcaecati voluptate. At, nihil.</p>
+<p><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></p>
 
- <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas est architecto id, nulla iure iusto laborum labore itaque dolorem tempora fugiat. Ea recusandae nulla fuga, esse maiores temporibus ducimus iure!</p>
- <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro atque modi fuga tempora dolorum necessitatibus adipisci quos praesentium? Repudiandae repellendus quas natus tenetur odit totam perferendis assumenda consequuntur. Et!</p>
- <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia hic, inventore totam, distinctio, consectetur quidem aliquid possimus suscipit praesentium aliquam iusto laudantium repudiandae reiciendis quasi laborum non provident quaerat eveniet.</p>
+<p><strong>Nota: </strong>a:hover tiene que ir despues de a:link y a:visited en las reglas de estilo para que sean efectivas. Y ademas,
+la pseudoclase a:active tiene que ir despues de a:hover.</p>
+
+<!-- Los PSeudo Elementos: Un pseudo elemento es una palabra resevada,
+que se le aplica a un elemento para darle estilo a una parte de dicho 
+elemento, y se diferencia de la pseudo clase, que esta separado del 
+elemento por dobles dos puntos (::), en lugar de dos puntos (:) solamente
+como es el caso de las pseudo clases -->
+
+<!-- A modo de ejemplo: Vamos a aplicar un estilo CSS a las primeras lineas de los parrafos que se muestran a continuacion -->
+
+<p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magnam labore, nihil eius sapiente voluptatum adipisci maiores deserunt facilis, ducimus dolore ullam nemo explicabo debitis omnis architecto delectus! Deleniti, beatae?</p>
+<p id="p4">Cum iure nemo officia, recusandae architecto eveniet sed, sunt, incidunt distinctio aperiam quia voluptas eius. Eum saepe ratione velit maxime fugit hic dolorem! Distinctio odio sed assumenda voluptatem, architecto ut.</p>
+<p id="p5">Sint voluptatibus asperiores eos aliquam non. Alias repellat, aliquid ipsam provident mollitia et aliquam quia blanditiis veritatis ex, magnam voluptatem perferendis quod nisi natus! Neque non accusantium odio libero tempora!</p>
 
 </body> 
 </html>  
