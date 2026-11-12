@@ -7,108 +7,64 @@
   <title>Positioning Example</title>
   <style>
     body {
-      width: 500px;
-      margin: 0 auto;
+      font-family: sans-serif;
+      margin: 0;
     }
 
-    p {
-      background: aqua;
-      border: 3px solid blue;
+    header {
+      background: purple;
+      height: 100px;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      line-height: 100px;
+      margin: 0;
+    }
+
+    section {
+    display: flex;
+    }
+
+    article {
       padding: 10px;
       margin: 10px;
-    }
-
-    span {
-      background: red;
-      border: 1px solid black;
-    }
-
-    .positioned {
-      /* El simple hecho de establecer la propiedad position al valor relative, no cambia nada en absoluto, para apreciar los cambios tenemos que utilizar top, bottom, left y rigth */
-
-      position: fixed;
-      background: yellow;
-      top: 3px;
-      left: 3px;
-      width: 100%;
-      color: black;
-      text-align: center;
+      background: aqua;
     }
   </style>
 </head>
 
 <body>
-  <!-- Positioning (Posicionamiento): Te permite sacar a los elementos HTML 
-del flujo normal de renderizado (construccion) y hacerlos que se comporten de forma diferente, por ejemplo, situar un elemento sobre otro o que siempre permanezca en el mismo sitio dentro del viewport (area del navegador donde se renderiza el documento web)
+  <!-- Flex Box: Es una tecnica de diseño uni dimensional, para agrupar los elementos HTML en filas y columnas. Los elementos flexibles (flex items) expanden para rellenar el espacio adicional o se contraen para encajar en espacios mas pequeños -->
 
-A continuacion veremos, con ejemplos, los diferentes valores que puede tomar la propiedad position y como usarlos
+  <!-- ¿Por que flexbox? El layout css flexbox nos permite lo siguiente:
 
-Valores de position:
-    1- static: Valor por defecto de posicionar los elementos dentro de la pagina web
-2- relative: Los elementos HTML posicionados utilizando este valor permanecen en el flujo normal, excepto si se aplica el posicionamiento absoluto (fixed/sticky) que saca a los elementos fuera del flujo normal y los situa en capas separadas
-3- Utilizando las propiedades top, bottom, left y right, que daran un valor difente en el posicionamiento 
-4- Establecer el contexto de posicionamiento de un elemento posicionado, tomando en consideracion la posicion de un ancestro (padre, etc.)-->
+1- Verticalmente centrar un bloque de contenido dentro de su padre
+2- Hace que todos los hijos de un elemento contenedor tomen una cantidad de espacio igual del espacio disponible en ancho y altura, independientemente de cuanto ancho y altura quede
+3- Hace que todas las columnas de un diseño de multiples columnas adopte la misma altura aunque cada tengan contenidos diferentes -->
 
-  <h1>ejemplo de absolute Positioning</h1>
+  <header>
+    <h1>flexbox ejemplo</h1>
+  </header>
+  <section>
+    <article>
+      <h2>primer articulo</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione soluta beatae corrupti consequatur quasi ex earum, sapiente, tempore inventore dicta eligendi est aut recusandae culpa modi doloribus eum ipsa voluptate!</p>
+    </article>
+    <article>
+      <h2>segundo articulo</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores necessitatibus delectus quaerat fuga maiores nulla iste. Unde, iusto cum. Eveniet fugit eligendi animi similique quidem, tenetur tempore aperiam quas ad?</p>
+    </article>
+    <article>
+      <h2>
+        tercer articulo
+      </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quis distinctio quisquam ipsum consequuntur, laborum, voluptatem beatae quibusdam, nesciunt rem architecto est a! Ea similique nisi repellendus unde, facilis ullam.</p>
+    </article>
 
-  <p>Soy un elemento a nivel de bloque basico. Mis elementos de bloque adyacentes se ubican en nuevas lineas por debajo
-    de la mia</p>
-    <nav class="positioned">
-      <h1>barra de navegacion</h1>
-    </nav>
 
-  <p>
-    Estamos separados por nuestros margenes. Debido a los margenes colapsados, estamos separados por el ancho de uno de
-    nuestros margenes y no por ambos
-  </p>
-
-  <p>
-    Los elementos inline <span>como este</span> y <span>este otro</span> se ubican en la misma linea si hay espacio en
-    la misma linea. El sobrante de los elementos inline <span>se atrapa en una nueva linea si es posible - como esta
-      conteniendo texto</span>, o solamente va en una nueva linea de lo contrario, como seria con la imagen siguiente:
-    <img src="https://mdn.github.io/shared-assets/images/examples/long.jpg" alt="Imagen libre">
-
-  </p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, doloremque qui? Architecto maxime facere dolorem modi cupiditate? Consequuntur voluptate debitis omnis, quisquam dolorem tempora, eius commodi nostrum, voluptatem numquam magnam?</p>
-<p>Molestias distinctio alias facilis officia autem, pariatur ea quidem eligendi est esse obcaecati non consequatur vero omnis veritatis vel, ratione quos? Nihil facere eveniet itaque, mollitia cumque ex accusantium veniam?</p>
-<p>Repellendus officia aspernatur omnis beatae hic impedit ipsum sed perferendis fuga rerum illum, ullam vel, sunt maiores nesciunt odio dolor quia quae aut earum dolores ea deserunt, id suscipit? Rerum?</p>
-<p>Itaque placeat dolorem ut maxime facere aliquid consectetur labore cupiditate eaque, ad, asperiores voluptas ratione? Iusto ullam ipsum sit? Incidunt quibusdam porro alias adipisci sint omnis reprehenderit mollitia ad? At.</p>
-<p>Quidem, recusandae. Soluta officiis eius deserunt voluptas vero. Aperiam natus veritatis consectetur illo non. Nihil ipsam sunt modi voluptate aspernatur quos possimus tempora alias, odit beatae earum deserunt illum veniam.</p>
-<p>Cum sequi sed inventore magnam? Reiciendis cumque rem aspernatur ducimus labore, odio amet libero at, iure eos praesentium. Asperiores perspiciatis rem maiores commodi quibusdam deleniti dicta vero nesciunt quidem non.</p>
-<p>Deleniti magnam saepe delectus eligendi? Eligendi incidunt molestias assumenda sit, voluptatibus necessitatibus dolore quo officia quam itaque perspiciatis optio sunt beatae totam cupiditate, in et, nesciunt maxime ipsa consequatur. Quam?</p>
-<p>Voluptate, omnis repudiandae quis ducimus delectus assumenda voluptatem corporis. Minima quaerat sequi neque voluptatum dolore officia debitis molestias. Repellat reprehenderit voluptatibus ipsum aliquid velit dolorum modi qui mollitia minima dolor!</p>
-<p>Molestias, repellat quo? Voluptatum odio maiores quidem provident. Nam tenetur provident id quia asperiores commodi reiciendis vero sunt veritatis exercitationem ipsa consequatur deleniti in praesentium assumenda, ullam eveniet earum eos!</p>
-<p>Nihil expedita saepe enim harum fugit quibusdam molestiae, perferendis repudiandae eos ea blanditiis similique nemo, optio veniam. Quos numquam delectus, nesciunt ad ea, consequatur architecto eveniet, ipsum libero reprehenderit velit!</p>
-<p>
-  <loren></loren>
-</p>
-<p>
-  <loren></loren>
-</p>
-<p>
-  <loren></loren>
-</p>
-<p>
-  <loren></loren>
-</p>
-<p>
-  <loren></loren>
-</p>
-<p>
-  <loren></loren>
-</p>
-<p>
-  <loren></loren>
-</p>
-<p>
-  <loren></loren>
-</p>
-<p>
-  <loren></loren>
-</p>
-<p>
-  <loren></loren>
-</p>
+  </section>
 </body>
 
 </html>
