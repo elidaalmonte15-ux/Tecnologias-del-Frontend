@@ -7,47 +7,58 @@
   <title>css grid layout</title>
   <style>
     .container {
-            font-family: sans-serif;
-            display: grid;
-            grid-template-areas:
-                "header header"
-                "sidebar content"
-                "footer footer"
+      font-family: sans-serif;
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer"
 
-            ;
-            grid-template-columns: 1fr 3fr;
-            gap: 20px;
-        }
+      ;
+      grid-template-columns: 1fr 3fr;
+      gap: 20px;
+    }
 
-        header,
-        footer {
-            border-radius: 5px;
-            padding: 10px;
-            background-color: rebeccapurple;
-            color: whitesmoke;
-            text-align: center;
-        }
+    header,
+    footer {
+      border-radius: 5px;
+      padding: 10px;
+      background-color: rebeccapurple;
+      color: whitesmoke;
+      text-align: center;
+    }
 
-        aside {
-            border-right: 1px solid rebeccapurple;
-        }
+    aside {
+      border-right: 1px solid rebeccapurple;
+    }
 
-        header {
-            grid-area: header;
-        }
+    header {
+      grid-area: header;
+    }
 
-        main {
-            grid-area: content;
-        }
+    main {
+      grid-area: content;
+      display: grid;
+      grid-template-rows: 4fr 3fr 3fr;
+      gap: inherit;
 
-        aside {
-            grid-area: sidebar;
-        }
 
-        footer {
-            grid-area: footer;
-        }
-   
+    }
+
+    article {
+      padding: 10px;
+      border: 2px solid rebeccapurple;
+      border-radius: 5px;
+
+    }
+
+    aside {
+      grid-area: sidebar;
+    }
+
+    footer {
+      grid-area: footer;
+    }
   </style>
 </head>
 
@@ -55,8 +66,18 @@
   <div class="container">
     <header>Header</header>
     <main>
-      <h1>Main</h1>
-      <p>Main content</p>
+      <article>
+        <h1>article 1</h1>
+        <p>Content ...</p>
+      </article>
+      <article>
+        <h1>article 2</h1>
+        <p>Content ...</p>
+      </article>
+      <article>
+        <h1>article 3</h1>
+        <p>Content ...</p>
+      </article>
     </main>
     <aside>
       <h2>Aside</h2>
